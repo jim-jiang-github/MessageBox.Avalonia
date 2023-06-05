@@ -156,16 +156,16 @@
 
         </Grid>
         <!--Buttons-->
-        <ItemsControl ItemsSource="{Binding ButtonDefinitions}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"
+        <ListBox Items="{Binding ButtonDefinitions}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"
                         HorizontalAlignment="Right">
-            <ItemsControl.ItemsPanel>
+            <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel Orientation="Horizontal"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center" />
                 </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>            
-            <ItemsControl.ItemTemplate>
+            </ListBox.ItemsPanel>            
+            <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Button Name="Btn"
                             Command="{Binding ((viewModels:MsBoxInputViewModel)DataContext).ButtonClickCommand, RelativeSource={RelativeSource AncestorType=Window, AncestorLevel=1}}"
@@ -175,7 +175,7 @@
                             IsDefault="{Binding IsDefault}"
                             IsCancel="{Binding IsCancel}" />
                 </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>

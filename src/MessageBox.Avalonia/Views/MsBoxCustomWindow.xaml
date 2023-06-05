@@ -93,17 +93,17 @@
 
         </Grid>
         <!--Buttons-->
-        <ItemsControl Name="ButtonItemsPresenter" Classes="buttons-item-presenter" ItemsSource="{Binding ButtonDefinitions}" Grid.Row="3"
+        <ListBox Name="ButtonItemsPresenter" Classes="buttons-item-presenter" Items="{Binding ButtonDefinitions}" Grid.Row="3"
                         Grid.Column="1" Grid.ColumnSpan="3"
                         HorizontalAlignment="Right">
-            <ItemsControl.ItemsPanel>
+            <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <StackPanel Orientation="Horizontal"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center" />
                 </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-            <ItemsControl.ItemTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Button Name="Btn"
                             HorizontalContentAlignment="Center"
@@ -117,7 +117,7 @@
                             IsDefault="{Binding IsDefault}"
                             IsCancel="{Binding IsCancel}" />
                 </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>

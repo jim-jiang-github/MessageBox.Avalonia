@@ -75,19 +75,19 @@
             <TextBox Grid.Row="0" Classes="header" FontFamily="{Binding FontFamily}" Text="{Binding ContentHeader}"
                      IsVisible="{Binding HasHeader}" />
             <!--Content text-->
-            <ItemsControl x:Name="myItems" ItemsSource="{Binding HyperlinkContentProvider}">
-                <ItemsControl.ItemsPanel>
+            <ListBox x:Name="myItems" Items="{Binding HyperlinkContentProvider}">
+                <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Horizontal" />
                     </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
                     <DataTemplate>
                         <c:Hyperlink Text="{Binding Alias}" Url="{Binding Url}" />
                     </DataTemplate>
-                </ItemsControl.ItemTemplate>
+                </ListBox.ItemTemplate>
 
-            </ItemsControl>
+            </ListBox>
         </Grid>
         <!--Buttons-->
         <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"

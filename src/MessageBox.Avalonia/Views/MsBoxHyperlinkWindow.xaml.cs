@@ -25,7 +25,7 @@ public class MsBoxHyperlinkWindow : BaseWindow, IWindowGetResult<ButtonResult>
     //More like a workaround because i dont know how to set it only with styles in .xaml file
     protected override void OnOpened(EventArgs e)
     {
-        var res = this.Find<ItemsControl>("myItems");
+        var res = this.Find<ListBox>("myItems");
         var temp = res?.GetLogicalChildren();
         if (temp != null)
         {
